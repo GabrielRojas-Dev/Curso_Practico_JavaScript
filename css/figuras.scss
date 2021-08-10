@@ -1,0 +1,113 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Mukta:wght@200;400;700&display=swap');
+
+//Variables
+$blue-dark: #0A1931;
+$blue-light: #185ADB;
+$Yellow-light: #FFC947;
+$gray-light: #EFEFEF;
+$white-basic: #ffffff;
+
+//Globales
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: $gray-light;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+// Elimina la flecha de los inputs
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+.header__container {
+    display: flex;
+    background-color: $blue-dark;
+    color: $white-basic;
+    width: 100%;
+    height: 100px;
+    
+    h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 50px;
+        padding: 10px;
+        margin: auto;
+    }
+}
+
+//Calcular perimetro
+
+.calPerimetro__container {
+    display: flex;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid $blue-dark;
+    background-color: $white-basic;
+    width: 50%;
+    border-radius: 25px;
+
+    h2 {
+       margin-bottom: 1rem;
+       text-align: center;
+       text-transform: uppercase;
+       line-height: 1.5rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        input {
+            height: 50px;
+            border-radius: 25px;
+            outline: none;
+            padding-left: 20px;
+            font-size: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            border: 2px solid $Yellow-light;
+            
+        }
+
+
+        button {
+            padding: 1rem;
+            margin-bottom: .5rem;
+            border-radius: 25px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: $Yellow-light;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $blue-light;
+                color: $white-basic;
+            }
+        }
+    }
+
+    
+}
+
+::placeholder {
+    outline: none;
+    text-align: center;
+    opacity: 50%;
+}

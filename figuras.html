@@ -5,17 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas | Curso Practico JavaScript</title>
-    <link rel="stylesheet" href="/figuras.css">
+    <link rel="stylesheet" href="/css/figuras.css">
 </head>
 <body>
+
+
     <header class="container header__container">
         <h1>Figuras Geometricas</h1>
     </header>
 
-    <main>
+    <section class="container calPerimetro__container">
+        <h2>Calcula el area y el perimetro de un cuadrado</h2>
+        <form action="">
+            <input id="inputCuadrado" type="number" placeholder="Medida">
 
-    </main>
+            <button onclick="calcularPerimetroCuadrado" type="button">
+                Calcula el perímetro
+            </button>
 
-    <script src="/figuras.js"></script>
+            <button onclick="calcularAreaCuadrado" type="button">
+                Calcula el área
+            </button>
+            
+        </form>
+    </section>
+
+    <script src="/js/figuras.js"></script>
 </body>
 </html>
