@@ -1,113 +1,149 @@
 //Fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Mukta:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Mukta:wght@200;400;700&display=swap");
 
 //Variables
-$blue-dark: #0A1931;
-$blue-light: #185ADB;
-$Yellow-light: #FFC947;
-$gray-light: #EFEFEF;
+$blue-dark: #0a1931;
+$blue-light: #185adb;
+$Yellow-light: #ffc947;
+$gray-light: #efefef;
 $white-basic: #ffffff;
 
 //Globales
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'DM Sans', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
 body {
-    background-color: $gray-light;
-}
-
-.container {
-    padding: 0 1rem;
+  background-color: $gray-light;
 }
 
 // Elimina la flecha de los inputs
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
--webkit-appearance: none;
-margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
 
 .header__container {
-    display: flex;
-    background-color: $blue-dark;
-    color: $white-basic;
-    width: 100%;
-    height: 100px;
-    
-    h1 {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 50px;
-        padding: 10px;
-        margin: auto;
-    }
+  display: flex;
+  background-color: $blue-dark;
+  color: $white-basic;
+  width: 100%;
+  height: 125px;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    line-height: 3rem;
+  }
 }
 
-//Calcular perimetro
+//Contenedor
 
-.calPerimetro__container {
+.container {
+  display: grid;
+  //   overflow: hidden;
+  grid-auto-flow: dense;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+
+  .item__container--cuadrado {
+    grid-column: 1 / 2;
+  }
+
+  .item__container--triangulo {
+    grid-column: 2 / 3;
+  }
+
+  .item__container--circulo {
+    grid-column: 3 / 4;
+  }
+}
+
+.item__container {
+  display: flex;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid $blue-dark;
+  background-color: $white-basic;
+  // width: 50%;
+  border-radius: 25px;
+
+  form {
     display: flex;
-    margin: 1.5rem auto;
-    padding: 1rem;
     flex-direction: column;
-    align-items: center;
-    border: 5px solid $blue-dark;
-    background-color: $white-basic;
-    width: 50%;
-    border-radius: 25px;
+    width: 100%;
+
+    input {
+      height: 50px;
+      outline: none;
+      padding-left: 20px;
+      font-size: 20px;
+      margin-bottom: 1rem;
+      text-align: center;
+      border: none;
+      border-bottom: 3px solid $Yellow-light;
+    }
+  }
+
+  .item__title {
+    margin: 0 auto 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    i {
+      font-size: 4.5rem;
+    }
 
     h2 {
-       margin-bottom: 1rem;
-       text-align: center;
-       text-transform: uppercase;
-       line-height: 1.5rem;
+      //   margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.5rem;
+      margin: auto 1rem;
+      font-size: 2rem;
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        
-        input {
-            height: 50px;
-            border-radius: 25px;
-            outline: none;
-            padding-left: 20px;
-            font-size: 20px;
-            margin-bottom: 1rem;
-            text-align: center;
-            border: 2px solid $Yellow-light;
-            
-        }
-
-
-        button {
-            padding: 1rem;
-            margin-bottom: .5rem;
-            border-radius: 25px;
-            border: none;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: $Yellow-light;
-
-            &:hover {
-                cursor: pointer;
-                background-color: $blue-light;
-                color: $white-basic;
-            }
-        }
+    p {
+      margin-top: 0.5rem;
+      line-height: 15px;
     }
+  }
 
-    
+  .item__button {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: $Yellow-light;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $blue-light;
+      color: $white-basic;
+    }
+  }
 }
 
 ::placeholder {
-    outline: none;
-    text-align: center;
-    opacity: 50%;
+  outline: none;
+  text-align: center;
+  opacity: 50%;
 }
+
+//Calcular perimetro

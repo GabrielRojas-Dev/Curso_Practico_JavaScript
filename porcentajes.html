@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descuentos | Curso Practico JavaScript</title>
+  <link rel="stylesheet" href="/css/porcentajes.css" />
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header__container">
+    <h1>Porcentajes y descuentos</h1>
+  </header>
+
+  <section class="container">
+    <div class="item__container">
+      <div class="item__title">
+        <i class="bx bxs-cart bx-fade-left"></i>
+        <h2>Calcula tu descuento</h2>
+      </div>
+
+      <div class="item__formulario">
+        <form action="">
+          <label for="">¿Cuál es el precio?</label>
+          <input id="inputPrecio" type="number" placeholder="Precio" />
+
+          <label for="">¿Cuál es el % de descuento?</label>
+          <input id="inputDescuento" type="number" placeholder="% de descuento" />
+
+          <label for="">¿Tienes un cupon?</label>
+          <input id="inputCupon" type="text" placeholder="Cupon" />
+
+          <button class="item__button" onclick="calcularPrecioConDescuento()" type="button">
+            Calcular
+          </button>
+        </form>
+      </div>
+
+      <p id="resultadoDescuento" class="resultado"></p>
+      <p id="resultadoCupon" class="resultado"></p>
+      <p id="resultadoMontoConDescuento" class="resultado"></p>
+    </div>
+  </section>
+
+  <script src="/js/porcentajes.js"></script>
+</body>
+
+</html>

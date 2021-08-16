@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figuras Geometricas | Curso Practico JavaScript</title>
-    <link rel="stylesheet" href="/css/figuras.css">
+    <link rel="stylesheet" href="/css/figuras.css" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-
-
-    <header class="container header__container">
-        <h1>Figuras Geometricas</h1>
+  <body>
+    <header class="header__container">
+      <h1>Figuras Geometricas</h1>
     </header>
 
-    <section class="container calPerimetro__container">
-        <h2>Calcula el area y el perimetro de un cuadrado</h2>
+    <section class="container">
+
+      <div class="item__container item__container--cuadrado">
+
+          <div class="item__title">
+            <i class='bx bxs-square bx-tada bx-flip-vertical' ></i>           
+            <h2>Cuadrado</h2>
+            <p>Calcula el area y el perimetro de un cuadrado</p>
+          </div>
+        
         <form action="">
-            <input id="inputCuadrado" type="number" placeholder="Medida">
+          <input id="inputCuadrado" type="number" placeholder="Medida" />
 
-            <button onclick="calcularPerimetroCuadrado()" type="button">
-                Calcula el perímetro
-            </button>
+          <button class="item__button" onclick="calcularPerimetroCuadrado()" type="button">
+            Perímetro
+          </button>
 
-            <button onclick="calcularAreaCuadrado()" type="button">
-                Calcula el área
-            </button>
-            
+          <button class="item__button" onclick="calcularAreaCuadrado()" type="button">
+            Área
+          </button>
         </form>
-    </section>
+      </div>
 
-    <section class="container calPerimetro__container">
-        <h2>Calcula el area y el perimetro de un cuadrado</h2>
+      <div class="item__container item__container--triangulo">
+
+        <div class="item__title">
+            <i class='bx bxs-left-arrow bx-flip-horizontal bx-tada' ></i>
+            <h2>Triangulo</h2>
+            <p>Calcula el area y el perimetro de un triangulo</p>
+          </div>
+
         <form action="">
-            <input id="inputCuadrado" type="number" placeholder="Medida">
+          <input id="inputTrianguloLadoA" type="number" placeholder="Lado A" />
+          <input id="inputTrianguloLadoB" type="number" placeholder="Lado B" />
+          <input id="inputTrianguloBase" type="number" placeholder="Base" />
 
-            <button onclick="calcularPerimetroCuadrado()" type="button">
-                Calcula el perímetro
-            </button>
+          <button class="item__button" onclick="calcularPerimetroTriangulo()" type="button">
+            Perímetro
+          </button>
 
-            <button onclick="calcularAreaCuadrado()" type="button">
-                Calcula el área
-            </button>
-            
+          <button class="item__button" onclick="calcularAreaTriangulo()" type="button">
+            Área
+          </button>
         </form>
-    </section>
+      </div>
 
-    <section class="container calPerimetro__container">
-        <h2>Calcula el area y el perimetro de un cuadrado</h2>
+      <div class="item__container item__container--circulo">
+
+        <div class="item__title">
+            <i class='bx bxs-circle bx-tada bx-flip-vertical' ></i>
+            <h2>Circulo</h2>
+            <p>Calcula el area y el perimetro de un circulo</p>
+          </div>
+
         <form action="">
-            <input id="inputCuadrado" type="number" placeholder="Medida">
+          <input id="inputCuadrado" type="number" placeholder="Medida" />
 
-            <button onclick="calcularPerimetroCuadrado()" type="button">
-                Calcula el perímetro
-            </button>
+          <button class="item__button" onclick="calcularPerimetroCuadrado()" type="button">
+            Perímetro
+          </button>
 
-            <button onclick="calcularAreaCuadrado()" type="button">
-                Calcula el área
-            </button>
-            
+          <button class="item__button" onclick="calcularAreaCuadrado()" type="button">
+            Área
+          </button>
         </form>
+      </div>
     </section>
-
-
 
     <script src="/js/figuras.js"></script>
-</body>
+  </body>
 </html>

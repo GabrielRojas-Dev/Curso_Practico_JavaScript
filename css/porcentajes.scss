@@ -1,0 +1,137 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Mukta:wght@200;400;700&display=swap");
+
+//Variables
+$blue-dark: #0a1931;
+$blue-light: #185adb;
+$Yellow-light: #ffc947;
+$gray-light: #efefef;
+$white-basic: #ffffff;
+
+//Globales
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: $gray-light;
+}
+
+// Elimina la flecha de los inputs
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.header__container {
+  display: flex;
+  background-color: $blue-dark;
+  color: $white-basic;
+  width: 100%;
+  height: 125px;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    line-height: 3rem;
+  }
+}
+
+
+//Contenedor
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+.item__container {
+    background-color: $white-basic;
+    border: 4px solid $blue-dark;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    width: 30rem;
+    border-radius: 1rem;
+    color: $blue-dark;
+
+    .item__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 5rem;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .item__formulario {
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 1rem auto;
+
+            label {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            input {
+                height: 1.5rem;
+                font-size: 1.2rem;
+                padding-bottom: 5px;
+                margin-bottom: 1rem;
+                text-align: center;
+                outline: none;
+                border: none;
+                border-bottom: 2px solid $blue-dark;
+
+
+                &:focus {
+                    border-bottom: 3px solid $blue-light; 
+                }
+            }
+
+            ::placeholder {
+                outline: none;
+                opacity: 25%;
+            }
+
+            button {
+                font-size: 1.2rem;
+                padding: 1rem;
+                border: none;
+                background-color: $blue-dark;
+                color: $white-basic;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $blue-light;
+                }
+            }
+        }
+    }
+
+    .resultado {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
