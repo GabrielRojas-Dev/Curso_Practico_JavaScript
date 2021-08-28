@@ -1,3 +1,8 @@
+#Costumers
+*.jpg
+*.css.map
+*.scss
+
 # Logs
 logs
 *.log

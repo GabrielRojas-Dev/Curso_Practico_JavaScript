@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media-Moda-Mediana | Curso Practico JavaScript</title>
+  <link rel="stylesheet" href="/css/moda.css" />
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <header class="header__container">
+    <h1>Media - Moda - Mediana</h1>
+  </header>
+
+  <section class="container">
+
+
+    <div class="item__container item__container--triangulo">
+
+      <div class="item__title">
+        <i class='bx bxs-calculator bx-tada'></i>
+        <h2>Moda - Media - Mediana</h2>
+        <p>Calcula la moda, media y mediana de lo que quieras</p>
+      </div>
+
+      <form action="">
+        <input id="inputValores" type="text" placeholder="Ej. 1,2,3,4,5,6,7,8,9,0" />
+
+
+        <button class="item__button" onclick="calcularModa()" type="button">
+          Moda
+        </button>
+
+        <button class="item__button" onclick="calcularMedia()" type="button">
+          Media
+        </button>
+
+        <button class="item__button" onclick="calcularMediana()" type="button">
+          Mediana
+        </button>
+      </form>
+    </div>
+
+    <div class="resultado__contenedor">
+      <h2>Resultados</h2>
+      <h3>Moda</h3>
+      <p id="resultadoModa"></p>
+      <h3>Media</h3>
+      <p id="resultadoMedia"></p>
+      <h3>Mediana</h3>
+      <p id="resultadoMediana"></p>
+    </div>
+  
+
+  </section>
+
+  
+  <script src="/js/moda.js"></script>
+</body>
+
+</html>
