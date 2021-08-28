@@ -1,6 +1,6 @@
 #Costumers
 *.jpg
-*/css/.css.map
+/css/.css.map
 *.scss
 
 # Logs
